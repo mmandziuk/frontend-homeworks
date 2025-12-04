@@ -6,13 +6,13 @@
 
 .button:hover {
   cursor: pointer;
+  transition-duration: 1s;
 }
 
 .button--primary {
   background-color: #a27b5c;
   color: #ffffff;
   border: none;
-  transition-duration: 1s;
 }
 
 .button--primary:hover {
