@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.product_image {
+  width: 300px;
+  height: 300px;
+  display: block;
+}
+
+p,
+.product_price span {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #121212;
+}
+
+.product_title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #121212;
+  line-height: 1.3;
+  margin-top: 16px;
+  padding-bottom: 8px;
+}
+
+.product_subtitle {
+  font-weight: 400;
+  color: #7f7f7f;
+  padding-bottom: 16px;
+}
+
+.product_price {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+  padding-bottom: 8px;
+}
+
+.product_discount {
+  font-weight: 500;
+  color: #a27b5c;
+}
+
+.product_ribbon_sale,
+.product_ribbon_outofstock {
+  height: 52px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.product_ribbon_sale {
+  width: 91px;
+  background-color: #f14c35;
+}
+
+.product_ribbon_outofstock {
+  width: 152px;
+  background-color: #121212;
+}
+
+ul li {
+  list-style: none;
+}
