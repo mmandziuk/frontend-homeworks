@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOOD AND SNACK</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    /> -->
+  </head>
+  <body>
+    <header class="header container">
+      <a href="#" aria-label="Go to Home" class="logo">Coffee</a>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Story</a>
+          </li>
+          <li>
+            <a href="#">Menu</a>
+          </li>
+          <li>
+            <a href="#">Space</a>
+          </li>
+          <li>
+            <a href="#">Community</a>
+          </li>
+          <li>
+            <button class="button button--primary" aria-label="Open cart">
+              Cart (2)
+            </button>
+          </li>
+          <li>
+            <button class="button button--secondary" aria-label="Login in to">
+              Sign In
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container hero">
+        <h1>Our Menu</h1>
+        <p class="hero-description">
+          IMAJI Coffee provides a variety of high quality coffee and drinks and
+          flavors <br />that are suitable for you to support and cheer up your
+          day. We also provide <br />coffee to accompany you at home along with
+          the equipment.
+        </p>
+
+        <form action="#">
+          <div class="form-wrapper">
+            <div class="form-wrapper-search">
+              <div class="form-wrapper-controls">
+                <label for="search">Search</label>
+                <button class="clear-search">Clear</button>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  aria-label="Search product"
+                  type="text"
+                  id="search"
+                  placeholder="Enter keyword"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-wrapper">
+            <div class="form-wrapper-select">
+              <div class="form-wrapper-controls">
+                <label for="price">Price</label>
+                <button class="clear-select">Clear</button>
+              </div>
+              <div class="select-wrapper">
+                <select aria-label="Select product by price" id="price">
+                  <option value="Under $10">Under $10</option>
+                  <option value="Under $20">Under $20</option>
+                  <option value="Under $30">Under $30</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-wrapper">
+            <div class="form-wrapper-select">
+              <div class="form-wrapper-controls">
+                <label aria-label="Filter product" for="sort">Sort by</label>
+                <button class="clear-select">Clear</button>
+              </div>
+              <div class="select-wrapper">
+                <select id="sort">
+                  <option value="Best selling">Best selling</option>
+                  <option value="Newest">Newest</option>
+                  <option value="Сheapest">Сheapest</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <div class="tabs">
+          <div class="divider"></div>
+          <div class="tabs-container container">
+            <button class="btn-tabs" aria-label="Open a coffe and baverage tab">
+              COFFEE AND BAVERAGE
+            </button>
+            <button
+              class="active-tabs btn-tabs"
+              aria-label="Open a food and snack tab"
+            >
+              FOOD AND SNACK
+            </button>
+            <button
+              class="btn-tabs"
+              aria-label="Open a imaji coffe at home tab"
+            >
+              IMAJI COFFEE AT HOME
+            </button>
+          </div>
+          <div class="divider"></div>
+        </div>
+        <ul class="grid container-products">
+          <li>
+            <article aria-label="SEAFOOD LUNCH dish">
+              <a href="#" class="product_image"
+                ><img src="img/Image.png" alt="SEAFOOD LUNCH"
+              /></a>
+              <h4 class="product_title">SEAFOOD LUNCH</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">$5.00</p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article aria-label="FRENCH TOAST WITH SUGAR dish">
+              <a href="#" class="product_image"
+                ><img src="img/Image copy.png" alt="FRENCH TOAST WITH SUGAR"
+              /></a>
+              <h4 class="product_title">FRENCH TOAST WITH SUGAR</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">$5.00</p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article class="product" aria-label="CHOCOLATE CROISSANT dish">
+              <div class="product_ribbon_sale">SALE</div>
+              <a href="#" class="product_image"
+                ><img
+                  src="img/Product Image copy 9.png"
+                  alt="CHOCOLATE CROISSANT"
+              /></a>
+              <h4 class="product_title">CHOCOLATE CROISSANT</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">
+                $5.00 <span><s>$6,00</s></span>
+              </p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article class="product" aria-label="POTATO WEDGES dish">
+              <div class="product_ribbon_sale">SALE</div>
+              <a href="#" class="product_image"
+                ><img src="img/Product Image copy 8.png" alt="POTATO WEDGES"
+              /></a>
+              <h4 class="product_title">POTATO WEDGES</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">
+                $5.00 <span><s>$6,00</s></span>
+              </p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article aria-label="BROWNIES dish">
+              <a href="#" class="product_image"
+                ><img src="img/Product Image copy 7.png" alt="BROWNIES"
+              /></a>
+              <h4 class="product_title">BROWNIES</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">$5.00</p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article class="product" aria-label="BANANA CAKE dish">
+              <div class="product_ribbon_outofstock">OUT OF STOCK</div>
+              <a href="#" class="product_image"
+                ><img src="img/Product Image copy 6.png" alt="BANANA CAKE"
+              /></a>
+              <h4 class="product_title">BANANA CAKE</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">$5.00</p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article aria-label="SANDWICHES AND PICKLES dish">
+              <a href="#" class="product_image"
+                ><img
+                  src="img/Product Image copy 5.png"
+                  alt="SANDWICHES AND PICKLES"
+              /></a>
+              <h4 class="product_title">SANDWICHES AND PICKLES</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">$5.00</p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article aria-label="SPAGHETTI BOLOGNESE dish">
+              <a href="#" class="product_image"
+                ><img
+                  src="img/Product Image copy 4.png"
+                  alt="SPAGHETTI BOLOGNESE"
+              /></a>
+              <h4 class="product_title">SPAGHETTI BOLOGNESE</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">$5.00</p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article aria-label="SANDWICH VEGAN dish">
+              <a href="#" class="product_image"
+                ><img src="img/Product Image copy 3.png" alt="SANDWICH VEGAN"
+              /></a>
+              <h4 class="product_title">SANDWICH VEGAN</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">$5.00</p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article class="product" aria-label="EGGS BENEDICT BURGER dish">
+              <div class="product_ribbon_sale">SALE</div>
+              <a href="#" class="product_image"
+                ><img
+                  src="img/Product Image copy 2.png"
+                  alt="EGGS BENEDICT BURGER"
+              /></a>
+              <h4 class="product_title">EGGS BENEDICT BURGER</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">
+                $5.00 <span><s>$6,00</s></span>
+              </p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article class="product" aria-label="CORN CHEESE SANDWICH dish">
+              <div class="product_ribbon_sale">SALE</div>
+              <a href="#" class="product_image"
+                ><img
+                  src="img/Product Image copy.png"
+                  alt="CORN CHEESE SANDWICH"
+              /></a>
+              <h4 class="product_title">CORN CHEESE SANDWICH</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">
+                $5.00 <span><s>$6,00</s></span>
+              </p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+          <li>
+            <article aria-label="BUTTERMILK WAFFLE dish">
+              <a href="#" class="product_image"
+                ><img src="img/Product Image.png" alt="BUTTERMILK WAFFLE"
+              /></a>
+              <h4 class="product_title">BUTTERMILK WAFFLE</h4>
+              <p class="product_subtitle">Only at Cafe and Delivery</p>
+              <p class="product_price">$5.00</p>
+              <p class="product_discount">Get 20% Off in App</p>
+            </article>
+          </li>
+        </ul>
+        <button class="product_btn button--secondary">Load More</button>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-main container">
+        <div class="footer-content">
+          <h2>Our Location</h2>
+          <p>Jl. Bangkringan No 19, RT.11/RW.2, Kota Surabaya, 60124</p>
+          <p>Customer Service +6282-2876-6862</p>
+          <p>We Are Open from Sun - Mon 10 AM - 22 PM</p>
+        </div>
+        <div class="divider-footer"></div>
+        <div class="footer-links">
+          <ul>
+            <li>
+              <a href="#"><img src="img/links/spotify.svg" alt="spotify" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/links/instagram.svg" alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/links/tiktok.svg" alt="tiktok" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/links/youtube.svg" alt="youtube" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/links/twitter.svg" alt="twitter" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/links/telegram.svg" alt="telegram"
+              /></a>
+            </li>
+          </ul>
+          <div class="footer-app-links">
+            <p>Delivery Order</p>
+            <button>
+              <img src="img/links/logo app store.png" alt="App Store" />
+            </button>
+            <button>
+              <img src="img/links/logo google play.svg" alt="Google Play" />
+            </button>
+          </div>
+        </div>
+        <div class="footer-additional-info">
+          <p>© 2023 IMAJI COFFEE, All rights reserved</p>
+          <p>Terms and Conditions<span>|</span>Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

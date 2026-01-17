@@ -1,0 +1,416 @@
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #121212;
+  line-height: 1.4;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+/* HEADER styling */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 0;
+}
+
+.logo {
+  font-size: 36px;
+  line-height: 1.2;
+  color: #a27b5c;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+
+.menu li a:visited {
+  color: #7f7f7f;
+}
+
+.menu li a:hover {
+  color: #a27b5c;
+}
+
+.menu li a:link {
+  color: #121212;
+}
+
+.button {
+  padding: 12px 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.button:hover {
+  cursor: pointer;
+  border: none;
+  transition: 1s;
+}
+
+.button--primary {
+  border: none;
+  background-color: #a27b5c;
+  color: #fff;
+}
+
+.button--primary:hover {
+  background-color: #7f7f7f;
+  border: none;
+}
+
+.button--secondary {
+  padding: 11px 15px;
+  border: 1px solid #a27b5c;
+  background-color: transparent;
+  color: #a27b5c;
+}
+
+.button--secondary:hover {
+  border: 1px solid #7f7f7f;
+  color: #7f7f7f;
+}
+
+/* MAIN styling */
+
+/* section-1 */
+
+.hero {
+  padding: 80px 0 48px 0;
+}
+
+.container h1 {
+  font-size: 96px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  line-height: 1;
+}
+
+.hero-description {
+  margin-bottom: 48px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.form-wrapper label,
+.form-wrapper button {
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+}
+
+.form-wrapper button {
+  border: none;
+  background-color: transparent;
+}
+
+.form-wrapper button:hover {
+  cursor: pointer;
+}
+
+.form-wrapper-controls {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.clear-search {
+  color: #7f7f7f;
+}
+
+.clear-select {
+  color: #f14c35;
+}
+
+.form-wrapper-search {
+  flex: 1;
+  min-width: 574px;
+}
+
+@media (max-width: 1300px) {
+  .form-wrapper-search {
+    min-width: 474px;
+  }
+}
+
+.form-wrapper-select {
+  flex: 1;
+  min-width: 261px;
+}
+
+@media (max-width: 1300px) {
+  .form-wrapper-select {
+    min-width: 161px;
+  }
+}
+
+#search,
+#price,
+#sort {
+  padding: 16px;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  border: 1px solid #121212;
+  width: 100%;
+}
+
+#search {
+  padding-left: 48px;
+  color: #7f7f7f;
+}
+
+#search:focus,
+#price:focus,
+#sort:focus {
+  outline: 2px solid #a27b5c;
+  border: #a27b5c;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  content: "";
+  background: url(img/search.svg);
+  width: 16px;
+  height: 16px;
+}
+
+#price,
+#sort {
+  color: #121212;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::before {
+  right: 16px;
+  top: 12px;
+  position: absolute;
+  content: url(img/angle-down.svg);
+  pointer-events: none;
+}
+
+/* section-2 */
+
+.tabs {
+  margin-bottom: 48px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e3e3e3;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-tabs {
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  padding: 32px;
+  width: 100%;
+}
+
+.btn-tabs:hover {
+  cursor: pointer;
+  border-top: 1px solid #a27b5c;
+  border-bottom: 1px solid #a27b5c;
+  color: #a27b5c;
+}
+
+.active-tabs {
+  border-top: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+}
+
+.container-products {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+  .container-products {
+    width: 1000px;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+p,
+.product_price span {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #121212;
+}
+
+.product_title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #121212;
+  line-height: 1.3;
+  margin-top: 16px;
+  padding-bottom: 8px;
+}
+
+.product_subtitle {
+  font-weight: 400;
+  color: #7f7f7f;
+  padding-bottom: 16px;
+}
+
+.product_price {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+  padding-bottom: 8px;
+}
+
+.product_discount {
+  font-weight: 500;
+  color: #a27b5c;
+}
+.product {
+  position: relative;
+}
+
+.product_ribbon_sale,
+.product_ribbon_outofstock {
+  height: 52px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+  position: absolute;
+  padding: 12px 20px;
+}
+
+.product_ribbon_sale {
+  width: 91px;
+  background-color: #f14c35;
+}
+
+.product_ribbon_outofstock {
+  background-color: #121212;
+}
+
+.product_btn {
+  display: block;
+  margin: 48px auto 80px auto;
+}
+
+/* FOOTER styling */
+
+footer {
+  background-color: #121212;
+  color: #fff;
+}
+
+.footer-main {
+  padding: 56px 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content h2 {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.footer-content p {
+  color: #fff;
+  line-height: 1.4;
+  padding-bottom: 16px;
+}
+
+.divider-footer {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  margin: 16px 0 32px 0;
+}
+
+.footer-links,
+.footer-links ul,
+.footer-app-links,
+.footer-additional-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-links {
+  padding-bottom: 80px;
+}
+
+.footer-links ul,
+.footer-app-links {
+  gap: 24px;
+}
+
+.footer-app-links p,
+.footer-additional-info p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.footer-additional-info p {
+  color: #a27b5c;
+}
+
+.footer-additional-info p span {
+  margin: 0 10px;
+}
