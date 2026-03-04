@@ -135,7 +135,7 @@
               <div class="select-wrapper">
                 <select id="sort">
                   <option value="Best selling">Best selling</option>
-                  <option value="Newest">Newest</option>
+                  <option value="Most expensive">Most expensive</option>
                   <option value="Сheapest">Сheapest</option>
                 </select>
               </div>
@@ -147,24 +147,24 @@
       <section>
         <div class="tabs">
           <div class="divider"></div>
-          <div class="tabs-container">
+          <div class="tabs-container" data-category="all">
             <button
-              class="btn-tabs"
-              id="coffe-tab"
+              class="active-tabs btn-tabs"
+              data-category="beverages"
               aria-label="Open a coffe and baverage tab"
             >
               COFFEE AND BAVERAGE
             </button>
             <button
-              class="active-tabs btn-tabs"
-              id="food-tab"
+              class="btn-tabs"
+              data-category="food"
               aria-label="Open a food and snack tab"
             >
               FOOD AND SNACK
             </button>
             <button
               class="btn-tabs"
-              id="coffe-at-home-tab"
+              data-category="coffee-beans equipment"
               aria-label="Open a imaji coffe at home tab"
             >
               IMAJI COFFEE AT HOME
@@ -172,8 +172,9 @@
           </div>
           <div class="divider"></div>
         </div>
+
         <ul class="grid container-products">
-          <li>
+          <!-- <li>
             <article aria-label="SEAFOOD LUNCH dish">
               <a href="#"
                 ><img
@@ -353,7 +354,7 @@
               <p class="product_price">$5.00</p>
               <p class="product_discount">Get 20% Off in App</p>
             </article>
-          </li>
+          </li>-->
         </ul>
         <button class="product_btn button--secondary">Load More</button>
       </section>
@@ -411,4 +412,5 @@
       </div>
     </footer>
   </body>
+  <script type="module" src="./script.js"></script>
 </html>
