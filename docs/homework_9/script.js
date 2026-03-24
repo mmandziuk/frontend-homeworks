@@ -40,20 +40,12 @@ btns.addEventListener("click", (e) => {
   renderProducts();
 });
 
-const saleRibbon = product.originalPrice
-  ? `<div class="product_ribbon_sale">SALE</div>`
-  : "";
-
-const originalPrice = product.originalPrice
-  ? `<span><s>$${product.originalPrice}.00</s></span>`
-  : "";
-
 const createProductCart = (product) => {
   if (product.originalPrice) {
     return `
     <li>
         <article aria-label="SEAFOOD LUNCH dish">
-        ${saleRibbon}
+            <div class="product_ribbon_sale">SALE</div>
             <a href="#"
             ><img
                 class="product_image"
@@ -63,31 +55,66 @@ const createProductCart = (product) => {
             <h4 class="product_title">${product.name}</h4>
             <p class="product_subtitle">${product.availability}</p>
             <p class="product_price">
-            <p class="product_price">$${product.price}.00 ${originalPrice}</p>
+            $${product.price}.00 <span><s>$${product.originalPrice}.00</s></span>
             </p>
             <p class="product_discount">Get 20% Off in App</p>
         </article>
     </li>
     `;
   }
+  return `
+    <li>
+        <article aria-label="SEAFOOD LUNCH dish">
+            <a href="#"
+            ><img
+                class="product_image"
+                src="${product.image}"
+                alt="SEAFOOD LUNCH"
+            /></a>
+            <h4 class="product_title">${product.name}</h4>
+            <p class="product_subtitle">${product.availability}</p>
+            <p class="product_price"> $${product.price}.00</p>
+            <p class="product_discount">Get 20% Off in App</p>
+        </article>
+    </li>
+    `;
 };
 
 const renderProducts = () => {
   const filteredProducts = products.filter((p) => {
-    const matchCategory = currentCategory.includes(p.category);
-    const matchName =
-      !inputValue || p.name.toLowerCase().includes(inputValue.toLowerCase());
-    const matchPrice = !selectPrice || p.price < selectPrice;
-    return matchCategory && matchName && matchPrice;
+    if (inputValue && !selectPrice) {
+      return (
+        p.name.toLowerCase().includes(inputValue.toLowerCase()) &&
+        currentCategory.includes(p.category)
+      );
+    }
+
+    if (selectPrice && !inputValue) {
+      return p.price < selectPrice && currentCategory.includes(p.category);
+    }
+
+    if (inputValue && selectPrice) {
+      return (
+        p.price < selectPrice &&
+        p.name.toLowerCase().includes(inputValue.toLowerCase()) &&
+        currentCategory.includes(p.category)
+      );
+    }
+
+    return currentCategory.includes(p.category);
   });
 
-  if (sortProducts === "Cheapest") {
-    filteredProducts.sort((a, b) => a.price - b.price);
-  } else if (sortProducts === "Most expensive") {
-    filteredProducts.sort((a, b) => b.price - a.price);
-  } else {
-    filteredProducts.sort((a, b) => a.id - b.id);
-  }
+  sortProducts == "Сheapest"
+    ? filteredProducts.sort((a, b) => {
+        return a.price - b.price;
+      })
+    : "Most expensive"
+    ? filteredProducts.sort((a, b) => {
+        return b.price - a.price;
+      })
+    : filteredProducts.sort((a, b) => {
+        return a.id - b.id;
+      });
 
   const date = filteredProducts.map((p) => createProductCart(p)).join("");
   productsContainer.innerHTML = date;

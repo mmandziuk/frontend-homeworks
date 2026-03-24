@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOOD AND SNACK</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <a href="#" aria-label="Go to Home" class="logo">Coffee</a>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Story</a>
+          </li>
+          <li>
+            <a href="#">Menu</a>
+          </li>
+          <li>
+            <a href="#">Space</a>
+          </li>
+          <li>
+            <a href="#">Community</a>
+          </li>
+          <li>
+            <button class="button button--primary" aria-label="Open cart">
+              Cart (2)
+            </button>
+          </li>
+          <li>
+            <button class="button button--secondary" aria-label="Login in to">
+              Sign In
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <header class="header-mobile-main container">
+      <div class="header-mobile">
+        <a class="header-mobile-logo" href="#">IMAJI <span>Coffee.</span></a>
+        <div class="header-mobile-btns">
+          <button class="btn-card">
+            <img src="img/shopping-basket.svg" alt="Shopping basket" />
+
+            <span class="counter">1</span>
+          </button>
+          <button class="btn-menu-mobile">
+            <img src="img/menu-right.png" alt="Menu" />
+          </button>
+        </div>
+        <!-- <div class="mobile-menu">
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Story</a>
+            </li>
+            <li>
+              <a href="#">Menu</a>
+            </li>
+            <li>
+              <a href="#">Space</a>
+            </li>
+            <li>
+              <a href="#">Community</a>
+            </li>
+            <li>
+              <button class="button button--secondary" aria-label="Login in to">
+                Sign In
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div> -->
+      </div>
+    </header>
+    <main>
+      <section class="container hero">
+        <h1>Our Menu</h1>
+        <p class="hero-description">
+          IMAJI Coffee provides a variety of high quality coffee and drinks and
+          flavors <br />that are suitable for you to support and cheer up your
+          day. We also provide <br />coffee to accompany you at home along with
+          the equipment.
+        </p>
+
+        <form action="#">
+          <div class="form-wrapper">
+            <div class="form-wrapper-search">
+              <div class="form-wrapper-controls">
+                <label for="search">Search</label>
+                <button class="clear-search">Clear</button>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  aria-label="Search product"
+                  type="text"
+                  id="search"
+                  placeholder="Enter keyword"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-wrapper">
+            <div class="form-wrapper-select">
+              <div class="form-wrapper-controls">
+                <label for="price">Price</label>
+                <button class="clear-select">Clear</button>
+              </div>
+              <div class="select-wrapper">
+                <select aria-label="Select product by price" id="price">
+                  <option value="Under $10">Under $10</option>
+                  <option value="Under $20">Under $20</option>
+                  <option value="Under $30">Under $30</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-wrapper">
+            <div class="form-wrapper-select">
+              <div class="form-wrapper-controls">
+                <label aria-label="Filter product" for="sort">Sort by</label>
+                <button class="clear-select">Clear</button>
+              </div>
+              <div class="select-wrapper">
+                <select id="sort">
+                  <option value="Best selling">Best selling</option>
+                  <option value="Most expensive">Most expensive</option>
+                  <option value="Сheapest">Сheapest</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <div class="tabs">
+          <div class="divider"></div>
+          <div class="tabs-container" data-category="all">
+            <button
+              class="active-tabs btn-tabs"
+              data-category="beverages"
+              aria-label="Open a coffe and baverage tab"
+            >
+              COFFEE AND BAVERAGE
+            </button>
+            <button
+              class="btn-tabs"
+              data-category="food"
+              aria-label="Open a food and snack tab"
+            >
+              FOOD AND SNACK
+            </button>
+            <button
+              class="btn-tabs"
+              data-category="coffee-beans equipment"
+              aria-label="Open a imaji coffe at home tab"
+            >
+              IMAJI COFFEE AT HOME
+            </button>
+          </div>
+          <div class="divider"></div>
+        </div>
+
+        <ul class="grid container-products"></ul>
+        <button class="product_btn button--secondary">Load More</button>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-main container">
+        <div class="footer-content">
+          <h2>Our Location</h2>
+          <p>Jl. Bangkringan No 19, RT.11/RW.2, Kota Surabaya, 60124</p>
+          <p>Customer Service +6282-2876-6862</p>
+          <p>We Are Open from Sun - Mon 10 AM - 22 PM</p>
+        </div>
+        <div class="divider-footer"></div>
+        <div class="footer-links">
+          <ul>
+            <li>
+              <a href="#"><img src="img/links/spotify.svg" alt="spotify" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/links/instagram.svg" alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/links/tiktok.svg" alt="tiktok" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/links/youtube.svg" alt="youtube" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/links/twitter.svg" alt="twitter" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/links/telegram.svg" alt="telegram"
+              /></a>
+            </li>
+          </ul>
+          <div class="footer-app-links">
+            <p>Delivery Order</p>
+            <div class="footer-app-links-btns">
+              <button class="footer-app-links-btn">
+                <img src="img/links/logo app store.png" alt="App Store" />
+              </button>
+              <button>
+                <img src="img/links/logo google play.svg" alt="Google Play" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-additional-info">
+          <p>© 2023 IMAJI COFFEE, All rights reserved</p>
+          <p>Terms and Conditions<span>|</span>Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="module" src="./script.js"></script>
+</html>
