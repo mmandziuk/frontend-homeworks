@@ -39,18 +39,18 @@ btns.addEventListener("click", (e) => {
 
   renderProducts();
 });
-
-const saleRibbon = product.originalPrice
-  ? `<div class="product_ribbon_sale">SALE</div>`
-  : "";
-
-const originalPrice = product.originalPrice
-  ? `<span><s>$${product.originalPrice}.00</s></span>`
-  : "";
+console.log(products);
 
 const createProductCart = (product) => {
-  if (product.originalPrice) {
-    return `
+  const saleRibbon = product.originalPrice
+    ? `<div class="product_ribbon_sale">SALE</div>`
+    : "";
+
+  const originalPrice = products.originalPrice
+    ? `<span><s>$${products.originalPrice}.00</s></span>`
+    : "";
+
+  return `
     <li>
         <article aria-label="SEAFOOD LUNCH dish">
         ${saleRibbon}
@@ -69,7 +69,6 @@ const createProductCart = (product) => {
         </article>
     </li>
     `;
-  }
 };
 
 const renderProducts = () => {
