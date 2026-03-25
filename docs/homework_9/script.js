@@ -11,45 +11,56 @@ let selectPrice;
 let sortProducts;
 let currentCategory = "beverages";
 
-search.addEventListener("input", (event) => {
-  inputValue = event.target.value;
-  // renderProducts();
-});
+async function getProduct() {
+  const response = await fetch(
+    "https://69c38cd1b780a9ba03e71f52.mockapi.io/api/products/products"
+  );
+  const data = await response.json();
+  return data;
+}
 
-price.addEventListener("change", (event) => {
-  selectPrice = +event.target.value.slice(-2);
-  console.log(selectPrice);
-  // renderProducts();
-});
+getProduct().then((res) => {
+  renderProducts(res);
 
-sort.addEventListener("change", (event) => {
-  sortProducts = event.target.value;
-  console.log(sortProducts);
-  // renderProducts();
-});
-
-btns.addEventListener("click", (e) => {
-  const allButtons = btns.querySelectorAll(".btn-tabs");
-  allButtons.forEach((button) => {
-    button.classList.remove("active-tabs");
+  search.addEventListener("input", (event) => {
+    inputValue = event.target.value;
+    renderProducts(res);
   });
 
-  currentCategory = e.target.dataset.category;
-  e.target.classList.add("active-tabs");
+  price.addEventListener("change", (event) => {
+    selectPrice = +event.target.value.slice(-2);
+    renderProducts(res);
+  });
 
-  // renderProducts();
+  sort.addEventListener("change", (event) => {
+    sortProducts = event.target.value;
+    console.log(sortProducts);
+    renderProducts(res);
+  });
+
+  btns.addEventListener("click", (e) => {
+    const allButtons = btns.querySelectorAll(".btn-tabs");
+    allButtons.forEach((button) => {
+      button.classList.remove("active-tabs");
+    });
+
+    currentCategory = e.target.dataset.category;
+    e.target.classList.add("active-tabs");
+
+    renderProducts(res);
+  });
 });
-/*
-const saleRibbon = product.originalPrice
-  ? `<div class="product_ribbon_sale">SALE</div>`
-  : "";
-
-const originalPrice = product.originalPrice
-  ? `<span><s>$${product.originalPrice}.00</s></span>`
-  : "";
 
 const createProductCart = (product) => {
-    return `
+  const saleRibbon = product.originalPrice
+    ? `<div class="product_ribbon_sale">SALE</div>`
+    : "";
+
+  const originalPrice = product.originalPrice
+    ? `<span><s>$${product.originalPrice}.00</s></span>`
+    : "";
+
+  return `
     <li>
         <article aria-label="SEAFOOD LUNCH dish">
         ${saleRibbon}
@@ -70,7 +81,7 @@ const createProductCart = (product) => {
     `;
 };
 
-const renderProducts = () => {
+const renderProducts = (products) => {
   const filteredProducts = products.filter((p) => {
     const matchCategory = currentCategory.includes(p.category);
     const matchName =
@@ -90,16 +101,3 @@ const renderProducts = () => {
   const date = filteredProducts.map((p) => createProductCart(p)).join("");
   productsContainer.innerHTML = date;
 };
-*/
-// renderProducts();
-
-async function getProduct() {
-  const response = await fetch(
-    "https://69c38cd1b780a9ba03e71f52.mockapi.io/api/products/products"
-  );
-
-  const data = await response.json();
-  console.log(data);
-}
-
-getProduct();
